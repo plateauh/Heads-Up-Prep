@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".AddCelebActivity">
+    tools:context=".UpdateDeleteActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +16,7 @@
         android:layout_margin="10dp">
 
         <EditText
-            android:id="@+id/add_name_et"
+            android:id="@+id/update_name_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -25,7 +24,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/add_taboo1_et"
+            android:id="@+id/update_taboo1_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -33,7 +32,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/add_taboo2_et"
+            android:id="@+id/update_taboo2_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -41,23 +40,40 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/add_taboo3_et"
+            android:id="@+id/update_taboo3_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Taboo 3"
             android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/add_btn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/add_celebrity" />
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/delete_celebrity"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:id="@+id/update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/update_celebrity"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/back_btn"
+        android:id="@+id/back_btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

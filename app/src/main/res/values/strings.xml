@@ -4,4 +4,7 @@
     <string name="celeb_name">Celeb Name</string>
     <string name="submit">submit</string>
     <string name="add_celebrity">add celebrity</string>
+    <string name="delete_celebrity">Delete Celebrity</string>
+    <string name="update_celebrity">update celebrity</string>
+    <string name="back">Back</string>
 </resources>

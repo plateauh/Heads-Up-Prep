@@ -3,6 +3,7 @@ package com.najed.headsup
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -82,10 +83,14 @@ class UpdateDeleteActivity : AppCompatActivity() {
     }
 
     private fun updateCeleb() {
+        celebItem = CelebItem(celebItem.pk, celebEditTexts[0].text.toString(),
+                celebEditTexts[1].text.toString(), celebEditTexts[2].text.toString(), celebEditTexts[3].text.toString())
+
         val apiInterface = APIClient().getClient()?.create(APIInterface::class.java)
         apiInterface?.updateCeleb(celebItem.pk, celebItem)?.enqueue(object: Callback<CelebItem>{
             override fun onResponse(call: Call<CelebItem>, response: Response<CelebItem>) {
                 Toast.makeText(this@UpdateDeleteActivity, "Celebrity updated", Toast.LENGTH_SHORT).show()
+                Log.d("celebItem", "The response is ${response.body()}")
             }
 
             override fun onFailure(call: Call<CelebItem>, t: Throwable) {

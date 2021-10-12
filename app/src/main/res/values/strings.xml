@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Heads UP!</string>
+    <string name="taboo">taboo</string>
+    <string name="celeb_name">Celeb Name</string>
+    <string name="submit">submit</string>
+    <string name="add_celebrity">add celebrity</string>
 </resources>
